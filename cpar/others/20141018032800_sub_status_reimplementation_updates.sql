@@ -1,0 +1,1 @@
+ALTER TABLE `cpar_main` CHANGE `sub_status` `sub_status` INT(11) NULL; 

@@ -1,0 +1,1 @@
+ALTER TABLE `cpar_main` ADD COLUMN `created_by` INT(255) NULL AFTER `is_deleted`;

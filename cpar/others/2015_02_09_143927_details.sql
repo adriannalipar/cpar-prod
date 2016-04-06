@@ -1,0 +1,1 @@
+ALTER TABLE `addressee_fields` ADD `rca_details` TEXT NULL AFTER `rca_investigated_date_ended`;

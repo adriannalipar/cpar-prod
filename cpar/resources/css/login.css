@@ -1,0 +1,170 @@
+div.row,
+div.col-md-12 {
+	margin-right: 0px;
+	padding-right: 0px;
+}
+
+div#login_header_container {
+	background-color: #EE0000;
+}
+
+div#login_header {
+	width: 100%;
+  	height: 105px;
+  	background-image: url('/_images/aboitiz_logo.png');
+  	background-repeat: no-repeat;  	
+}
+
+div#login_background {
+	min-height: 500px;
+	height: auto;
+}
+
+.form-wrapper.form-narrow {
+	max-width: 450px;
+}
+
+div#login_background {
+	background-image: url('/_images/login_background.jpg');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+div#login_background_container img {
+	max-width: 100%;
+	max-height: 100%;
+	width: 100%;
+}
+
+div#login_body {
+	text-align: center;
+	margin-top: 30px;
+}
+
+div#content {
+	padding: 0px;
+}
+
+form#login_form div.login_btn img {
+	max-width: 75%;
+	max-height: 100%;
+
+	-webkit-transition: 0.2s ease-out;
+    transition: 0.2s ease-out;
+}
+
+/* 404 */
+div#page_404_content {
+	padding-top: 30px;
+	text-align: center;
+}
+
+/* New Login */
+.header {
+	border-top: none;
+	height: 100px;
+	padding: 25px 0px 25px 0px;
+}
+
+div#app_name_container {
+  /* padding-top: 15px; */
+  text-align: right;
+}
+
+span#app_name {
+  font-size: 38px;
+  color: #FF0000;
+  padding-left: 15px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+span#app_full_name {
+	color: #FF0000;
+	font-size: 18px;
+	font-style: italic;
+}
+
+span.uline {
+	text-decoration: underline;
+}
+
+div#aboitiz_logo_container {
+  text-align: left;
+}
+
+div#aboitiz_logo_container img {
+  max-width: 100%;
+  max-height: 100%;
+  height: 100%;
+}
+
+@media (max-width: 529px) {
+  div#aboitiz_logo_container {
+    max-height: 50px;
+  }
+
+  #navigation .header {
+    height: 135px;
+  }
+
+  div#aboitiz_logo_container,
+  div#app_name_container {
+    text-align: center;
+  }
+}
+
+div#login_mid_body {
+	margin-left: -15px;
+	margin-right: -15px;
+	margin-top: 30px;
+}
+
+form#login_form h1 {
+	font-size: 32px;
+}
+
+div#login_body {
+	margin-top: 0px;
+}
+
+div#login_footer, div#page_wrapper:after  {
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+div#page_wrapper {
+	min-height: 100%;
+	margin-bottom: -40px;
+}
+
+div#login_background {
+	min-height: 400px;
+	height: auto;
+}
+
+.form-wrapper {
+	box-shadow: none;
+	border: none;
+}
+
+@media (max-width: 991px) {
+	div#login_footer  {
+		margin-top: 50px;
+	}
+}
+
+a#login_btn {
+	padding: 10px 20px;
+	font-size: 24px;
+}
+
+@media (max-width: 370px) {
+	a#login_btn {
+		font-size: 18px;
+	}
+
+	form#login_form h1 {
+		font-size: 28px;
+	}
+}

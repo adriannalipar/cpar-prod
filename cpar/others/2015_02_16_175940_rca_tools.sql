@@ -1,0 +1,1 @@
+ALTER TABLE `addressee_fields` CHANGE `rca_tools_others` `rca_tools_others` TEXT CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL;

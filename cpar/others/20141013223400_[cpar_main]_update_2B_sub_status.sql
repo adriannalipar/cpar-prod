@@ -1,0 +1,1 @@
+UPDATE cpar_main SET sub_status = 'For TL Review' where sub_status = '2B';

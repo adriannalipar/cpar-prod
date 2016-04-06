@@ -1,0 +1,2 @@
+ALTER TABLE `action_plan_details` ADD COLUMN `id` BIGINT NOT NULL FIRST, ADD PRIMARY KEY (`id`); 
+ALTER TABLE `action_plan_details` CHANGE `id` `id` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT;

@@ -1,0 +1,1 @@
+ALTER TABLE `cpar_main` ADD COLUMN `ff_up_date` DATE NULL AFTER `date_due`;

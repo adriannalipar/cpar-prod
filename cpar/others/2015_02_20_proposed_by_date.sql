@@ -1,0 +1,1 @@
+ALTER TABLE `addressee_fields` ADD `proposed_by_date` DATE NULL DEFAULT NULL AFTER `proposed_by`;

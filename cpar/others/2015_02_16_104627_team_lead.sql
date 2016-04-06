@@ -1,0 +1,1 @@
+ALTER TABLE `user` CHANGE `team_lead` `team_lead` INT(11) NULL DEFAULT NULL;

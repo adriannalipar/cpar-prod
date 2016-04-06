@@ -1,0 +1,1 @@
+ALTER TABLE `cpar_main` ADD COLUMN `closure_date` DATETIME NULL AFTER `updated_date`; 

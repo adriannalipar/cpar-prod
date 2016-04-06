@@ -1,0 +1,1 @@
+ALTER TABLE `cpar_main` ADD `date_filed` DATE NOT NULL AFTER `pb_remarks`;

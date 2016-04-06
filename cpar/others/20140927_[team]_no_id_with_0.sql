@@ -1,0 +1,1 @@
+UPDATE `team` SET `id` = '15' WHERE `id` = '0';

@@ -1,0 +1,1 @@
+ALTER TABLE `action_plan_details` CHANGE `responsible_person` `responsible_person` INT(255) NOT NULL;
