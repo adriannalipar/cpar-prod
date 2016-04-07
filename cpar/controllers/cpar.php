@@ -287,7 +287,6 @@ class Cpar extends MY_Controller {
 	
 		if($this->input->post()) {
 			$form = array_map('trim', $this->input->post());
-			array_walk($form, 'fix_output');
 			//skip validation when saving as draft
 			if(strcmp($this->input->post('m_status'), CPAR_MINI_STATUS_DRAFT) == 0) {
 				$errors = $this->validateDraft($form);
@@ -686,7 +685,7 @@ class Cpar extends MY_Controller {
 		$cpar = new stdClass();
 
 		$cpar->id = isset($form['id']) ? $form['id'] : '';
-		$cpar->title = $form['title'];
+		$cpar->title = fix_output2($form['title']);
 		$cpar->date_filed = $form['date_filed'];
 
 		//only set the type when it's a new record
@@ -697,9 +696,9 @@ class Cpar extends MY_Controller {
 		$cpar->raised_as_a_result_of = !empty($form['result_of']) ? $form['result_of'] : NULL;
 		$cpar->raised_as_a_result_of_others = (isset($form['result_of_others']) && !empty($form['result_of_others'])) ? $form['result_of_others'] : NULL;
 		$cpar->process = !empty($form['process']) ? $form['process'] : NULL;
-		$cpar->details = $form['details'];
-		$cpar->justification = $form['justification'];
-		$cpar->references = $form['references'];
+		$cpar->details = fix_output2($form['details']);
+		$cpar->justification = fix_output2($form['justification']);
+		$cpar->references = fix_output2($form['references']);
 		
 		if(intval($cpar->raised_as_a_result_of) != RAISED_AS_A_RESULT_OF_OTHERS_ID) {
 			$cpar->raised_as_a_result_of_others = NULL;

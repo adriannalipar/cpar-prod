@@ -367,37 +367,6 @@ function generate_rca_tools($rca_tools) {
 	return array($column1, $column2, $column3, $b_has_others, $obj_others);
 }
 
-function fix_output(&$value, $key){
-    $newstr = '';
-    $good[] = 9;  #tab
-    $good[] = 10; #nl
-    $good[] = 13; #cr
-    for($a=32;$a<127;$a++){
-        $good[] = $a;
-    }
-    $len = strlen($value);
-    for($b=0;$b < $len; $b++){
-        if(in_array(ord($value[$b]), $good)){
-            $newstr .= $value[$b];
-        }//fi
-    }//rof
-    $value = $newstr;
-}
-
-function fix_output2($value){
-    $newstr = '';
-    $good[] = 9;  #tab
-    $good[] = 10; #nl
-    $good[] = 13; #cr
-    for($a=32;$a<127;$a++){
-        $good[] = $a;
-    }
-    $len = strlen($value);
-    for($b=0;$b < $len; $b++){
-        if(in_array(ord($value[$b]), $good)){
-            $newstr .= $value[$b];
-        }//fi
-    }//rof
-    $value = $newstr;
-    return $value;
+function fix_output2($value, $default_value = NULL){    
+    return isset($value) ? trim($value) : $default_value;
 }
