@@ -704,10 +704,7 @@ function addTask() {
 		
 		attachments.push($(this).val());
 		
-	});	
-
-	task = task.replace(/[^a-z0-9 ,.?!]/ig, '');
-	remarks = remarks.replace(/[^a-z0-9 ,.?!]/ig, '');
+	});
 	
 	var taskObj = new Object();
 	taskObj.temp_task_id = temp_task_id;
@@ -1612,7 +1609,6 @@ function init_popovers() {
 		} else {
 			var tr = $div_popover.closest("tr");
 			if(tr.hasClass('new_task')) {
-				new_remarks = new_remarks.replace(/[^a-z0-9 ,.?!]/ig, '');
 				$(tr).find("div.remarks_popover").html(new_remarks);
 				refresh_tasks_to_add_remarks(tr, new_remarks);
 			} else {
@@ -1664,7 +1660,6 @@ function init_popovers() {
 		} else {
 			var tr = $div_popover.closest("tr");
 			if(tr.hasClass('new_task')) {
-				new_task = new_task.replace(/[^a-z0-9 ,.?!]/ig, '');
 				$(tr).find("div.task_popover").html(new_task);
 				refresh_tasks_to_add_task(tr, new_task);
 			} else {
