@@ -8,7 +8,6 @@ class Cpar_common extends MY_Controller {
 		parent::__construct();
 
 		$this->load->library('session');
-		$this->load->library('my_sessions');
 		$this->load->library('upload');
 		$this->load->library('email');
 
@@ -28,7 +27,7 @@ class Cpar_common extends MY_Controller {
 	}
 
 	public function sessionUpdate() {
-		$this->my_sessions->regenerate_id();
+		$this->session->regenerate_id();
 	}
 
 	public function saveWholeCpar() {

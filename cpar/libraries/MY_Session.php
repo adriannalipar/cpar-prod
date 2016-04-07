@@ -1,7 +1,7 @@
 <?php
 include_once(BASEPATH.'libraries/Session.php');
 
-class MY_Sessions extends CI_Session{
+class MY_Session extends CI_Session{
 
       public function __construct(){
           parent::__construct(); 
