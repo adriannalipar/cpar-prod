@@ -8,10 +8,11 @@ $(document).ready(function() {
         EXECUTE_LOGOUT = setInterval(function(){ window.location = LOGOUT_URL; }, IDLE_TIME);
     });
 
-    $('#session_update').click(function(){        
-        clearInterval(EXECUTE_LOGOUT);
+    $('#session_update').click(function(){
         $.ajax({
             url: "/cpar_common/sessionUpdate",
+        }).done(function(data){
+            clearInterval(EXECUTE_LOGOUT);
         });
     });
 });
