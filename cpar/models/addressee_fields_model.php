@@ -88,7 +88,7 @@ class Addressee_fields_model extends CI_Model {
 		$query = $this->db->get();
 		$addressee_fields = $query->row();
 		
-		return $addressee_fields;
+		return $this->cleanAddresseeFields($addressee_fields);
 	}
 
 	public function getActionPlanDetails($cpar_no) {
@@ -257,6 +257,20 @@ class Addressee_fields_model extends CI_Model {
 		$dbret = $this->db->update($this->tbl_action_plan_details, $arr);
 		
 		return $dbret;
+	}
+
+	private function cleanAddresseeFields($addressee_fields) {
+	    if (isset($addressee_fields) && !empty($addressee_fields)) {
+	        $addressee_fields->rad_action = htmlspecialchars($addressee_fields->rad_action);
+	        $addressee_fields->rad_implemented_by = htmlspecialchars($addressee_fields->rad_implemented_by);
+	        $addressee_fields->rca_tools_others = htmlspecialchars($addressee_fields->rca_tools_others);
+	        $addressee_fields->rca_details = htmlspecialchars($addressee_fields->rca_details);
+	        $addressee_fields->rca_investigated_by = htmlspecialchars($addressee_fields->rca_investigated_by);
+	        $addressee_fields->action = htmlspecialchars($addressee_fields->action);
+	        $addressee_fields->proposed_by_name = htmlspecialchars($addressee_fields->proposed_by_name);
+	    }
+
+	    return $addressee_fields;
 	}
 
 }

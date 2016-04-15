@@ -237,7 +237,7 @@ class Cpar_model extends CI_Model {
 
 		$cpar = $query->row();
 
-		return $cpar;
+		return $this->cleanMainForm($cpar);
 	}
 
 	public function updateCpar($cpar, $id) {
@@ -578,5 +578,19 @@ class Cpar_model extends CI_Model {
 		$dbret = $this->db->update($this->tbl_cpar_main, $arr);
 		
 		return $dbret;
+	}
+
+	private function cleanMainForm($cpar) {
+	    if (isset($cpar) && !empty($cpar)) {
+	        $cpar->title = htmlspecialchars($cpar->title);
+	        $cpar->type = htmlspecialchars($cpar->type);
+	        $cpar->raised_as_a_result_of = htmlspecialchars($cpar->raised_as_a_result_of);
+	        $cpar->process = htmlspecialchars($cpar->process);
+	        $cpar->details = htmlspecialchars($cpar->details);
+	        $cpar->justification = htmlspecialchars($cpar->justification);
+	        $cpar->references = htmlspecialchars($cpar->references);
+	    }
+	    
+	    return $cpar;
 	}
 }
