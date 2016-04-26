@@ -85,6 +85,9 @@
 			var APD_STATUS_DONE = <?php echo APD_STATUS_DONE?>;
 			var APD_STATUS_OVERDUE = <?php echo APD_STATUS_OVERDUE?>;
 			
+			//Pop-up before Timeout
+			var POP_UP_BEFORE_TIMEOUT = <?php echo POP_UP_BEFORE_TIMEOUT?>;
+			
 			//Idle time
 			var IDLE_TIME = <?php echo IDLE_TIME?>;
 			var EXECUTE_LOGOUT;
